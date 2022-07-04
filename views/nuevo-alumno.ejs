@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TP1 Recuperatorio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header class="text-white">
+            <div class="container">
+                <%- include('layout/header.ejs') %>
+                
+                <!-- Hacer un formulario para dar de alta un alumno nuevo y que pida Legajo, Nombre, Apellido, DNI, E-Mail -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="text-center mt-3">Nuevo Alumno</h1>
+                            <form action="/nuevo-alumno" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control mb-2" id="legajo" name="legajo" placeholder="Legajo">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mb-2" id="nombre" name="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mb-2" id="apellido" name="apellido" placeholder="Apellido">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mb-2" id="dni" name="dni" placeholder="DNI">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mb-2" id="mail" name="mail" placeholder="E-Mail">
+                                </div>
+                                <button type="submit" class="btn btn-primary d-block mx-auto">Crear</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <%- include('layout/footer.ejs') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

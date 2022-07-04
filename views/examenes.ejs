@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TP1 Recuperatorio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header class="text-white">
+            <div class="container">
+                <%- include('layout/header.ejs') %>
+
+
+                <!-- Visualizar el nombre del alumnos, el legajo, su email y dni junto al lista de exámenes realizados por ese alumno                En el listado exámenes debe figurar:
+                - Nombre de la Materia, Nota del examen ( Números del 1 al 10 o A si fue ausente), Fecha del examen (en formato de texto) -->
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h1>Exámenes</h1>
+                        <!-- Mostrar nombre del alumnos, el legajo, su email y dni -->
+                        <p class="m-0 text-white-50">Alumno: <%- alumno.nombre %> <%- alumno.apellido %> - Legajo: <%- alumno.legajo %></p>
+                        <p class="m-0 text-white-50">Email: <%- alumno.mail %> - DNI: <%- alumno.dni %></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <table class="table text-white">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Materia</th>
+                                        <th scope="col">Nota</th>
+                                        <th scope="col">Fecha</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% examenes.forEach(function(examen){ %>
+                                        <%- include('examen', {examen: examen}); %>
+                                    <% }); %>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <%- include('layout/footer.ejs'); %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

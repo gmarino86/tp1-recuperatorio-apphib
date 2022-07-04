@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TP1 Recuperatorio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header class="text-white">
+            <div class="container">
+                <%- include('layout/header.ejs') %>
+
+                <div class="row">
+                    <div class="col-12">
+                        <a href="/nuevo-alumno" class="btn btn-sm btn-success mt-4 float-end mx-4">Agregar Alumno</a>
+                        <div class="container overflow-auto">
+                            <table class="table text-white mt-2">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>Legajo</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>DNI</th>
+                                        <th>E-mail</th>
+                                        <th>Examenes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for (var i = 0; i < alumnos.length; i++) { %>
+                                        <tr class="text-center">
+                                            <td><%= alumnos[i].legajo %></td>
+                                            <td><%= alumnos[i].nombre %></td>
+                                            <td><%= alumnos[i].apellido %></td>
+                                            <td><%= alumnos[i].dni %></td>
+                                            <td><%= alumnos[i].mail %></td>
+                                            <td>
+                                                <a href="/alumnos/<%= alumnos[i].legajo %>" class="btn btn-primary">Ver examenes</a>
+                                            </td>
+                                        </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <%- include('layout/footer.ejs') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

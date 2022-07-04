@@ -1,0 +1,28 @@
+{
+  "name": "tp1-recuperatorio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmarino86/tp1-recuperatorio-apphib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmarino86/tp1-recuperatorio-apphib/issues"
+  },
+  "homepage": "https://github.com/gmarino86/tp1-recuperatorio-apphib#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0",
+    "nodemon": "^2.0.18"
+  }
+}

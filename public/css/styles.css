@@ -1,0 +1,22 @@
+.shadowTitle {
+    padding: 50px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px 5px black;
+}
+
+header{
+    width: 100vw;
+    height: 90vh;
+    background: #212529;
+    overflow-y: auto;
+}
+
+footer{
+    width: 100vw;
+    height: 10vh;
+    background: #212529;
+}
+.imgTitle{
+    width: 100px;
+
+}
