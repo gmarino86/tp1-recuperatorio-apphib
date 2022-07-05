@@ -5,7 +5,6 @@ export function findByLegajo(req, res) {
     const legajo = req.params.legajo;
     ExamenesModel.findByLegajo(legajo)
     .then(examenes => {
-        console.log('Entro al then');
         if (examenes == null) {
             examenes = [];
         }
@@ -22,6 +21,45 @@ export function findByLegajo(req, res) {
     })
 }
 
+export function update(req, res) {
+    const examen_id = req.params.examen_id;
+    const nota = req.body.nota;
+    ExamenesModel.update(examen_id, nota)
+    .then(examen => {
+        res.json(examen)
+    })
+    .catch(error => {
+        res.json(error)
+    })
+}
+
+export function create(req, res) {
+    const legajo = req.body.legajo;
+    const materia = req.body.materia;
+    const nota = req.body.nota;
+    ExamenesModel.create(legajo, materia, nota)
+    .then(examen => {
+        res.json(examen)
+    })
+    .catch(error => {
+        res.json(error)
+    })
+}
+
+export function remove(req, res) {
+    const examen_id = req.params.examen_id;
+    ExamenesModel.remove(examen_id)
+    .then(examen => {
+        res.json(examen)
+    })
+    .catch(error => {
+        res.json(error)
+    })
+}
+
 export default {
-    findByLegajo
+    findByLegajo,
+    update,
+    create,
+    remove
 }

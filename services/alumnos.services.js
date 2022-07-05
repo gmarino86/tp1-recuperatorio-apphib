@@ -19,7 +19,6 @@ async function findByLegajo(legajo) {
     const db = client.db("apphibtp1");
     const collection = db.collection("alumnos");
     const alumnos = await collection.findOne({legajo: parseInt(legajo)})
-    console.log('%calumnos.services.js line:22 alumnos', 'color: #007acc;', alumnos);
     await client.close();
     return alumnos;
 }

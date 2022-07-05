@@ -6,17 +6,16 @@
 
 header{
     width: 100vw;
-    height: 90vh;
+    height: 88vh;
     background: #212529;
     overflow-y: auto;
 }
 
 footer{
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     background: #212529;
 }
 .imgTitle{
     width: 100px;
-
 }
