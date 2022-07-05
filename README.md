@@ -2,9 +2,5 @@
 
 Archivos de Base de Datos
 Ubicacion: /MongoDB
-# -------------------------
 Database: apphibtp1
-Colletion:
--alumnos
--examenes
--materias
+Colletion: alumnos / examenes / materias
