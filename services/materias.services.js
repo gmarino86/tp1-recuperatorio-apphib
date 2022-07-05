@@ -45,7 +45,6 @@ async function create(materia) {
 }
 
 async function update(materia_id, materia) {
-    console.log('%cmaterias.services.js line:48 materia_id, materia', 'color: #007acc;', materia_id, materia);
     try {
         await client.connect();
         const db = client.db("apphibtp1");

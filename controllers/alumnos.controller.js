@@ -3,7 +3,6 @@ import * as AlumnosModel from "../services/alumnos.services.js"
 export function findAll(req, res) {
     AlumnosModel.findAll()
     .then(alumnos => {
-        console.log('%calumnos.controller.js line:6 alumnos', 'color: #007acc;', alumnos);
         res.render('alumnos', {alumnos})
     })
     .catch((err) => res.status(400).send("No me pude conectar: "+err))

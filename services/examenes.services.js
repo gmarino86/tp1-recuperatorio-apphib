@@ -17,7 +17,6 @@ async function findByLegajo(legajo) {
 }
 
 async function update(examen_id, nota) {
-    // console.log('%cexamenes.services.js line:20 examen_id, nota', 'color: #007acc;', examen_id, nota);
     try {
         await client.connect();
         const db = client.db("apphibtp1");

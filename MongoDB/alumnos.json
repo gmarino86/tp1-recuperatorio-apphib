@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "62c2028885b04d177b0b02f7"
+  },
+  "legajo": 1,
+  "nombre": "Gaston",
+  "dni": "32611266",
+  "mail": "gmarino86@hotmail.com",
+  "apellido": "Marino"
+}]

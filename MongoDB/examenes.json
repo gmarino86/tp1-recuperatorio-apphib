@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "62c2649e85b04d177b0b0322"
+  },
+  "materia": "Aplicaciones Hibridas",
+  "nota": 8,
+  "fecha_examen": "2022-07-04 00:30",
+  "legajo": 1
+}]

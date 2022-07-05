@@ -5,7 +5,6 @@ export function findByLegajo(req, res) {
     const legajo = req.params.legajo;
     ExamenesModel.findByLegajo(legajo)
     .then(examenes => {
-        console.log('Entro al then');
         if (examenes == null) {
             examenes = [];
         }
