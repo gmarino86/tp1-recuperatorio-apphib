@@ -32,15 +32,16 @@ async function update(examen_id, nota) {
     }
 }
 
-async function create(legajo, materia, nota) {
+async function create(examenData) {
     try {
         await client.connect();
         const db = client.db("apphibtp1");
         const collection = db.collection("examenes");
         await collection.insertOne({
-            legajo: parseInt(legajo),
-            materia: materia,
-            nota: parseInt(nota)
+            legajo: parseInt(examenData.legajo),
+            materia: examenData.materia,
+            nota: parseInt(examenData.nota),
+            fecha_examen: examenData.fecha_examen
         });
         await client.close();
         return {

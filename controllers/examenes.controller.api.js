@@ -34,10 +34,14 @@ export function update(req, res) {
 }
 
 export function create(req, res) {
-    const legajo = req.body.legajo;
-    const materia = req.body.materia;
-    const nota = req.body.nota;
-    ExamenesModel.create(legajo, materia, nota)
+    const examenData = req.body;
+    
+    // const legajo = req.body.legajo;
+    // const materia = req.body.materia;
+    // const nota = req.body.nota;
+    // const fecha_examen = req.body.fecha_examen;
+
+    ExamenesModel.create(examenData)
     .then(examen => {
         res.json(examen)
     })
